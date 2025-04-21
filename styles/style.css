@@ -1,13 +1,12 @@
 body {
 display: flex;
-justify-content: center;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .main-container {
 display: flex;
-width: 800px;
+width: 100vw;
 }
 
 .sidebar-content {
@@ -29,10 +28,11 @@ width: 800px;
     align-items: center;
     background-color: hsla(0, 0%, 0%, 0.473);
     height: 100px;
-    width: 400px;
+    width: auto;
     color: white;
     font-family: norse-bold, 'Times New Roman', Times, serif;
     font-size: 65px;
+    margin-top: 150px;
 
 }
 
@@ -44,8 +44,10 @@ width: 800px;
 .sidebar-footer {
     display: flex;
 justify-content: center;
-    width: 400px;
+    width: auto;
     color: white;
+    margin-bottom: 0px;
+    margin-top: auto;
 }
 
 .sidebar-footer a:link, .sidebar-footer a:visited {
@@ -56,10 +58,85 @@ justify-content: center;
     display: flex;
     flex-direction: column;
     width: auto;
+    
 }
 
 .header, .footer {
-background-color: grey;
+background-color: rgb(225, 226, 226);
+width: auto;
+}
+
+.header {
+    font-weight: bold;
+    padding-top: 100px;
+    padding-left: 25px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+}
+
+.footer {
+    display:flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 0px;
+    margin-top: auto;
+}
+
+.footer a:link, .footer a:visited {
+    color: #596D48;
+}
+
+button {
+
+background-color: #596D48;
+width: 175px;
+border-radius: 5px;
+height: 35px;
+color: white;
+font-weight: bold;
+border-style: none;
+}
+
+.form-content {
+    padding-left: 25px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-top: 0px;
+}
+
+label {
+    font-size: 0.7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+fieldset {
+    display: flex;
+    column-gap: 150px;
+    border-style: none;
 
 }
 
+.fname-sect, .lname-sect, .email-sect, .phone-sect, .pass1, .pass2{
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-color: #E5E7EB;
+    border-width: 1px;
+    border-style: solid;
+}
+
+input[type="password"]:invalid {
+    border-color: red;
+}
+
+input:focus {
+    color: grey;
+    box-shadow: 5px 5px 5px;
+    outline: none;
+    border-color: blue;
+}
